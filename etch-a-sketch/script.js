@@ -39,3 +39,35 @@ sizeSlider.onchange = (e) => changeSize(e.target.value)
 
 let mouseDown = false
 document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
+
+function changeSize(value){
+    setCurrentSize(value)
+    updateSizeValue(value)
+    reloadGrid()
+}
+
+function updateSizeValue(value){
+    sizeValue.innerHTML = '${value} x ${value}'
+
+}
+
+function reloadGrid(){
+    clearGrid()
+    setupGrid(currentSize)
+}
+
+function clearGrid(){
+
+}
+
+function setupGrid(){
+
+}
+
+function changeColor(){
+
+}
+
+function activateButton(){}
+
