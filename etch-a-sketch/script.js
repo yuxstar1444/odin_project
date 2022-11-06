@@ -7,11 +7,13 @@ let currentMode = DEFAULT_MODE
 let currentSize = DEFAULT_SIZE
 
 function setCurrentColor(newColor){
+    currentColor = newColor
 
 }
 
 function setCurrentMode(newMode){
-
+    activateButton (newMode)
+    currentMode = newMode
 }
 
 function setCurrentSize(newSize){
@@ -34,3 +36,6 @@ eraserButton.onclick= () => setCurrentMode('eraser')
 clearButton.onclick= () => setCurrentMode('clear')
 sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value)
 sizeSlider.onchange = (e) => changeSize(e.target.value)
+
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
