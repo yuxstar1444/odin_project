@@ -82,9 +82,45 @@ function changeColor(e){
         const randomR = Math.floor(Math.random()*256)
         const randomG = Math.floor(Math.random()*256)
         const randomB = Math.floor(Math.random()*256)
+        e.target.style.backgroundColor = 'rgb(${randomR}, ${randomG}, ${randomB})'
+    }
+
+    else if (currentMode === 'color'){
+        e.target.style.backgroundColor = currentColor
+    }
+
+    else if (currentMode === 'eraser'){
+        e.target.style.backgroundColor = '#FEFEFE'
     }
 
 }
 
-function activateButton(){}
+function activateButton(){
+    if (currentMode === 'rainbow'){
+        rainbowButton.classList.remove('active')
+    }
+    else if (currentMode === 'color'){
+        colorButton.classList.remove('active')
+    }
+
+    else if (currentMode === 'eraser'){
+        eraserButton.classList.remove('active')
+    }
+
+    if (newMode === 'rainbow'){
+        rainbowButton.classList.add('active')
+    }
+    else if (newMode === 'color'){
+        colorButton.classList.add('active')
+    }
+
+    else if (newMode === 'eraser'){
+        eraserButton.classList.add('active')
+    }
+}
+
+window.onload = () => {
+    setupGrid(DEFAULT_SIZE)
+    activateButton(DEFAULT_MODE)
+}
 
