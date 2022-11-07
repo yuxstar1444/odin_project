@@ -48,7 +48,7 @@ function changeSize(value){
 }
 
 function updateSizeValue(value){
-    sizeValue.innerHTML = '${value} x ${value}'
+    sizeValue.innerHTML = `${value} x ${value}` 
 
 }
 
@@ -61,9 +61,9 @@ function clearGrid(){
     grid.innerHTML = ''
 }
 
-function setupGrid(){
-    grid.style.gridTemplateColumns = 'repeat(${size}, 1fr)'
-    grid.style.gridTemplateRows = 'repeat(${size}, 1fr)'
+function setupGrid(size){
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`
 
     for(let i = 0; i < size * size; i++){
         const gridElement = document.createElement('div')
@@ -82,7 +82,7 @@ function changeColor(e){
         const randomR = Math.floor(Math.random()*256)
         const randomG = Math.floor(Math.random()*256)
         const randomB = Math.floor(Math.random()*256)
-        e.target.style.backgroundColor = 'rgb(${randomR}, ${randomG}, ${randomB})'
+        e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
     }
 
     else if (currentMode === 'color'){
@@ -95,7 +95,7 @@ function changeColor(e){
 
 }
 
-function activateButton(){
+function activateButton(newMode){
     if (currentMode === 'rainbow'){
         rainbowButton.classList.remove('active')
     }
