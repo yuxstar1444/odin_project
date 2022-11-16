@@ -1,0 +1,21 @@
+:root{
+    --yellow:#FCB31B;
+    --white: #FFFFFF;
+}
+
+*, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background: var(--yellow);
+}
+
+.container-parent{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5rem auto;
+    margin-bottom: 2rem;
+}
