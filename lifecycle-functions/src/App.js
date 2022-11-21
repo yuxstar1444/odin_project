@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Counter from './counter'
 
-import CSS from './app.css'
+import CSS from './App.css'
 
 class App extends React.Component{
   render(){
@@ -13,3 +13,5 @@ class App extends React.Component{
 }
 
 ReactDOM.render(<App/>, document.getElementById('root'))
+
+export default App;
