@@ -33,5 +33,8 @@ export default class Counter extends React.Component{
         console.log('Component Did Update')
         console.log('--------------------')
     }
+
+    componentDidMount(){
+        console.log('Component Will Unmount')
     }
 }
