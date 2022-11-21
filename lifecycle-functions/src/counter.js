@@ -13,6 +13,11 @@ export default class Counter extends React.Component{
         this.decrement = () => this.setState({counter: this.state.counter - 1})
     }
 
+    componentDidMount(){
+        console.log('Component Did Mount')
+        console.log('-------------------')
+    }
+
     render(){
         console.log('Render')
         return <div>
@@ -22,5 +27,11 @@ export default class Counter extends React.Component{
                 Counter: {this.state.counter}
             </div>
         </div>
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot){
+        console.log('Component Did Update')
+        console.log('--------------------')
+    }
     }
 }
