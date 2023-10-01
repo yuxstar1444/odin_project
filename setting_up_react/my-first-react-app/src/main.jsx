@@ -4,8 +4,9 @@ import App from './App.jsx'
 import './index.css'
 import Greeting from './Greeting.jsx'
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Greeting />
+    <Greeting /> 
   </React.StrictMode>,
 )
