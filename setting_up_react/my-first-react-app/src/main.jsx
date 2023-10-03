@@ -9,4 +9,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Greeting /> 
   </React.StrictMode>,
+  
 )
